@@ -1,0 +1,322 @@
+.hero{
+    position: relative;
+    background-color: var(--pink);
+    overflow: hidden;
+    height: 502px;
+    display: flex;
+    justify-content: flex-start;
+
+    @media screen and (min-width: $tablet) {
+        height: 416px;
+    }
+    @media screen and (min-width: $comp) {
+        height: 664px;
+    }
+}
+.hero-container{
+    padding-top: 194px;
+    position: relative;
+
+    @media screen and (min-width: $tablet){
+        padding-top: 102px;
+    }
+    @media screen and (min-width: $comp) {
+        padding-top: 147px;
+    }
+}
+.hero__text{
+    position: relative;
+    z-index: 3;
+}
+.hero__title{
+    margin-bottom: 20px;
+    font-family: 'Titan One';
+    font-style: normal;
+    text-transform: uppercase;
+    @include font(26px, 30px, 400, 0.04em);
+    color: #FFF;
+
+    @media screen and (min-width: $tablet){
+        font-size: 22px;
+        line-height: 25px;
+    }
+    @media screen and (min-width: $comp){
+        font-size: 38px;
+        line-height: 44px;
+        margin-bottom: 24px;
+    }
+}
+.hero__title--different-colour{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 96.5%;
+    color: var(--main-clr);
+
+    @media screen and (min-width: $tablet){
+        font-size: 34px;
+        line-height: 90.5%;
+    }
+    @media screen and (min-width: $comp){
+        font-size: 58px;
+    }
+}
+.hero__links{
+    display: flex;
+}
+.hero__li{
+    @include font(8px, 10px, 400);
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    background: var(--main-clr);
+    border-radius: 20px;
+    padding: 8px 14px;
+    margin-right: 8px;
+
+    transform: scale(1);
+    transition: color var(--trasition-fast), background-color var(--trasition-fast), transform var(--trasition-fast);
+    cursor: pointer;
+
+    @media screen and (min-width: $comp){
+        font-size: 14px;
+        line-height: 18px;
+        padding: 11px 23px;
+        margin-right: 12px;
+    }
+}
+.hero__li--second-color{
+    background-color: #fff;
+    color: var(--main-clr);
+}
+.hero__li:hover,
+.hero__li:focus {
+    background-color: var(--main-clr);
+    transform: scale(1.1);
+}
+.hero__li--second-color:hover,
+.hero__li--second-color:focus {
+    background-color: var(--hover-clr);
+    transform: scale(1.1);
+}
+
+.hero__ice{
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+
+    z-index: 1;
+    width: 171px;
+    height: auto;
+
+    transform: scale(1);
+    transition: transform var(--trasition-fast);
+    cursor: pointer;
+    @media screen and (min-width: $tablet) {
+        top: 80px;
+        left: 322px;
+        width: 143px;
+        height: auto;
+    }
+    @media screen and (min-width: $comp){
+        top: 108px;
+        left: 636px;
+        width: 236px;
+        height: auto;   
+    }
+}
+
+.hero__ice:hover,
+.hero__ice:focus {
+    transform: scale(1.2);
+}
+
+.hero__circle{
+    position: absolute;
+    top: 75px;
+    right: calc(5vw - 66px);
+
+    z-index: 0;
+    width: 345px;
+    height: 345px;
+    background-color: var(--secondary-clr);
+    border-radius: 50%;
+
+    @media screen and (min-width: $tablet) {
+        width: 334px;
+        height: 334px;
+        top: 43px;
+        right: 185px;
+    }
+    @media screen and (min-width: $comp){
+        width: 534px;
+        height: 534px;
+        top: 54px;
+        right: 149px;
+    }
+}
+.hero-box{
+    display: none;
+
+    @media screen and (min-width: $tablet){
+        display: flex;
+        margin-top: 20px;
+    }
+    @media screen and (min-width: $comp) {
+        margin-top: 20px;
+    }
+}
+.hero-box__milk{
+        width: 152px;
+        height: auto;
+
+    @media screen and (min-width: $comp){
+        width: 213px;
+        height: auto;
+    }
+}
+.hero-box__description{
+    z-index: 2;
+    width: 114px;
+
+    @media screen and (min-width: $comp){
+        width: 200px;
+    }
+}
+.hero-box__text{
+    @include font(8px, 12px, 400);
+    color: #FFF;
+    margin-top: 41px;
+    margin-bottom: 7px;
+
+    transform: scale(1);
+    transition: color var(--trasition-fast), background-color var(--trasition-fast), transform var(--trasition-fast);
+    cursor: pointer;
+
+    @media screen and (min-width: $comp){
+        font-size: 14px;
+        line-height: 140%;
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+}
+.hero-box__text:hover,
+.hero-box__text:focus {
+    transform: scale(1.3);
+    color: var(--main-clr);
+}
+.hero-box__icon-box{
+    background-color: #FFF;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $comp){
+        width: 26px;
+        height: 26px;
+    }
+}
+.hero-box__icon{
+    fill: var(--main-clr);
+    width: 7px;
+    height: 7px;
+
+    @media screen and (min-width: $comp){
+        width: 9px;
+        height: 9px;
+    }
+}
+.hero-info{
+    display: none;
+        
+    @media screen and (min-width: $tablet) {
+    display: flex;
+    position: absolute;
+    top: 94px;
+    right: 32px;
+    }
+    @media screen and (min-width: $comp){
+        top: 152px;
+        right: 21px;
+    }
+}
+.hero-info__text{
+    @include font(8px, 10px, 400);
+    color: #FFF;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 17px;
+    margin-right: 8px;
+
+    @media screen and (min-width: $comp){
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 15px;
+        margin-right: 10px;
+    }
+}
+.hero-info__number{
+    position: relative;
+    z-index: 1;
+    font-family: 'Titan One';
+    font-style: normal;
+    @include font(28px, 32px, 400);
+    text-transform: uppercase;
+    color: var(--main-clr);
+
+    @media screen and (min-width: $comp){
+        font-size: 46px;
+        line-height: 53px;
+    }
+}
+.hero-info__number::before {
+    content: '';
+    display: flex;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    right: -8px;
+    z-index: -1;
+
+    @media screen and (min-width: $comp){
+        width: 30px;
+        height: 30px;
+        right: -15px;
+        top: -3px;
+    }
+}
+.hero-info__girl{
+    display: none;
+
+    @media screen and (min-width: $tablet){
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    width: 190px;
+    height: 150px;
+    bottom: 0;
+    right: 32px;
+
+    transform: scale(1);
+    transition: transform var(--trasition-fast);
+    cursor: pointer;
+    }
+    @media screen and (min-width: $comp){
+        width: 304px;
+        height: 241px;
+        right: 16px;
+    }
+}
+.hero-info__girl:hover,
+.hero-info__girl:focus{
+    transform: scale(1.2);
+}
